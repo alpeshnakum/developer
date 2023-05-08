@@ -1,0 +1,54 @@
+{
+    "name": "Alpesh Nakum",
+    "short_name": "Alpesh Nakum Portfolio",
+    "description": "Alpesh Nakum Persnol Portfolio",
+    "theme_color": "#FFFFFF",
+    "background_color": "#000",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./assets/img/manifest/coding.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Home",
+            "url": "/",
+            "description": "Home Page"
+        },
+        {
+            "name": "About",
+            "description": "About Alpesh Nakum",
+            "url": "/#about"
+        },
+        {
+            "name": "Resume",
+            "short_name": "Resume",
+            "description": "Resume of Alpesh Nakum",
+            "url": "/#resume"
+        },
+        {
+            "name": "Services",
+            "short_name": "Services",
+            "description": "Services by Alpesh Nakum's",
+            "url": "/#services"
+        },
+        {
+            "name": "Portfolio",
+            "short_name": "Portfolio",
+            "description": "Alpesh Nakum's Portfolio",
+            "url": "/#portfolio"
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact",
+            "description": "Contact to Alpesh Nakum",
+            "url": "/#contact"
+        }
+    ]
+}
