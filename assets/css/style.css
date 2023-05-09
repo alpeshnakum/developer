@@ -51,7 +51,7 @@ body::before {
 
 @media (max-width: 480px){
   body::before{
-    background: #040404 url("../img/home-image.png") top left no-repeat;
+    background: #040404 url("../img/home-image-bw.png") top left no-repeat;
     background-size: cover;
     height: 100%;
     z-index: -1;
