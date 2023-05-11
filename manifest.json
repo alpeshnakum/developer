@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "./assets/img/android-launchericon-512-512.png",
+            "src": "./assets/img/android-launchericon-512-512-black.png",
             "sizes": "512x512",
             "type": "image/png"
         }
@@ -18,16 +18,37 @@
     "shortcuts": [
         {
             "name": "Home",
+            "icons": [
+                {
+                    "src": "./assets/img/home.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
             "url": "/",
             "description": "Home Page"
         },
         {
             "name": "About",
+            "icons": [
+                {
+                    "src": "./assets/img/about.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
             "description": "About Alpesh Nakum",
             "url": "/#about"
         },
         {
             "name": "Resume",
+            "icons": [
+                {
+                    "src": "./assets/img/resume.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
             "short_name": "Resume",
             "description": "Resume of Alpesh Nakum",
             "url": "/#resume"
