@@ -24,6 +24,7 @@ self.addEventListener("install", (event) => {
         './assets/img/instagram.png',
         './assets/img/linkedin.png',
         './assets/img/about.png',
+        './assets/img/screenshot.png',
         './assets/img/android-launchericon-192-192-black.png',
         './assets/img/android-launchericon-512-512-black.png',
         './assets/img/home.png',
