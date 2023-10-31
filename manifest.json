@@ -1,0 +1,75 @@
+{
+    "name": "Alpesh Nakum",
+    "short_name": "Alpesh Nakum Portfolio",
+    "description": "Alpesh Nakum Persnol Portfolio",
+    "theme_color": "#FFFFFF",
+    "background_color": "#000",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./assets/img/android-launchericon-512-512-black.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Home",
+            "icons": [
+                {
+                    "src": "./assets/img/home.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
+            "url": "/",
+            "description": "Home Page"
+        },
+        {
+            "name": "About",
+            "icons": [
+                {
+                    "src": "./assets/img/about.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
+            "description": "About Alpesh Nakum",
+            "url": "/#about"
+        },
+        {
+            "name": "Resume",
+            "icons": [
+                {
+                    "src": "./assets/img/resume.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ],
+            "short_name": "Resume",
+            "description": "Resume of Alpesh Nakum",
+            "url": "/#resume"
+        },
+        {
+            "name": "Services",
+            "short_name": "Services",
+            "description": "Services by Alpesh Nakum's",
+            "url": "/#services"
+        },
+        {
+            "name": "Portfolio",
+            "short_name": "Portfolio",
+            "description": "Alpesh Nakum's Portfolio",
+            "url": "/#portfolio"
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact",
+            "description": "Contact to Alpesh Nakum",
+            "url": "/#contact"
+        }
+    ]
+}

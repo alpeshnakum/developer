@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Recording</title>
+  </head>
+  <body>
+    <video id="preview" autoplay></video>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <button id="saveRecording" disabled>Save Recording</button>
+
+    <script>
+      let mediaStream;
+      let mediaRecorder;
+      let recordedChunks = [];
+      const videoElement = document.getElementById("preview");
+      const startButton = document.getElementById("startRecording");
+      const stopButton = document.getElementById("stopRecording");
+      const saveButton = document.getElementById("saveRecording");
+      const previewButton = document.getElementById("previewRecording");
+
+      // Start recording
+      startButton.addEventListener("click", async () => {
+        try {
+          mediaStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+          videoElement.srcObject = mediaStream;
+          mediaRecorder = new MediaRecorder(mediaStream);
+          mediaRecorder.ondataavailable = (event) => {
+            if (event.data.size > 0) {
+              recordedChunks.push(event.data);
+            }
+          };
+          mediaRecorder.start();
+          startButton.disabled = true;
+          stopButton.disabled = false;
+          saveButton.disabled = true;
+          previewButton.disabled = true;
+        } catch (error) {
+          console.error("Error accessing the camera: ", error);
+        }
+      });
+
+      // Stop recording
+      stopButton.addEventListener("click", () => {
+        mediaRecorder.stop();
+        startButton.disabled = false;
+        stopButton.disabled = true;
+        saveButton.disabled = false;
+        previewButton.disabled = false;
+      });
+
+      // Save recording
+      saveButton.addEventListener("click", () => {
+        const blob = new Blob(recordedChunks, { type: "video/webm" });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = "recorded-video.webm";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      });
+
+      // Preview recording
+      previewButton.addEventListener("click", () => {
+        const blob = new Blob(recordedChunks, { type: "video/webm" });
+        const url = window.URL.createObjectURL(blob);
+        videoElement.src = url;
+      });
+    </script>
+  </body>
+</html>
